@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
           display.value = 'Error';
         }
-      } else if (buttonValue === 'C') {
+      } else if (buttonValue === 'AC') {
         display.value = '';
       } else if (buttonValue === 'DEL') {
         display.value = display.value.slice(0, -1);
@@ -28,16 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
           factorialValue *= j;
         }
         display.value = factorialValue;
-      } else if (buttonValue === '(') {
-        display.value += '(';
-      } else if (buttonValue === ')') {
-        display.value += ')';
+      } else if (buttonValue === '1/x') {
+        display.value = 1 / eval(display.value);
       } else {
         display.value += buttonValue;
       }
     });
   }
-
+  
   function evalWithParentheses(expression) {
     var openingBracketsCount = (expression.match(/\(/g) || []).length;
     var closingBracketsCount = (expression.match(/\)/g) || []).length;
