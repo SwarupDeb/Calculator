@@ -6,7 +6,7 @@ html, body {
   
   /* waves */
   .ocean {
-    height: 200px; /* change the height of the waves here */
+    height: 130px; /* change the height of the waves here */
     width: 100%; /* changed from 200% */
     position: absolute;
     bottom: 0;
@@ -110,4 +110,4 @@ html, body {
   .clear {
     background-color: #FF6600;
   }
-  
+ 
